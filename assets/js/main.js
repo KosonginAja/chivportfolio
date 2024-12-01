@@ -74,7 +74,7 @@
         navbarToggle.classList.toggle('bi-x')
       }
 
-      if (this.hash == '#header') {
+      if (this.hash == '#header') { 
         header.classList.remove('header-top')
         sections.forEach((item) => {
           item.classList.remove('section-show')

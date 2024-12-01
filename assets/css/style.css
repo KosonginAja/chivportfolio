@@ -85,7 +85,7 @@ h6 {
 #header h2 span {
   color: #fff;
   border-bottom: 2px solid #8bd450;
-  padding-bottom: 6px;
+  padding-bottom: 1px;
 }
 
 #header img {
@@ -535,12 +535,13 @@ section .container {
 
 .interests .icon-box:hover {
   background: rgba(255, 255, 255, 0.12);
+  transform: scale(1.05);
 }
 
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
-.testimonials .testimonials-carousel,
+/* .testimonials .testimonials-carousel,
 .testimonials .testimonials-slider {
   overflow: hidden;
 }
@@ -616,7 +617,7 @@ section .container {
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #8bd450;
-}
+} */
 
 /*--------------------------------------------------------------
 # Resume
@@ -683,6 +684,8 @@ section .container {
 # Services
 --------------------------------------------------------------*/
 .services .icon-box {
+  height: 100%;
+  width: 100%;
   text-align: center;
   background: rgba(204, 204, 204, 0.1);
   padding: 80px 20px;
@@ -740,6 +743,7 @@ section .container {
 .services .icon-box:hover {
   background: #8bd450;
   border-color: #8bd450;
+  transform: scale(1.05);
 }
 
 .services .icon-box:hover .icon {
@@ -801,10 +805,21 @@ section .container {
 
 .portfolio .portfolio-wrap {
   transition: 0.3s;
+  height: 260px;
   position: relative;
   overflow: hidden;
   z-index: 1;
   background: rgba(0, 0, 0, 0.6);
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.portfolio .portfolio-wrap .imageport{
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .portfolio .portfolio-wrap::before {
@@ -834,6 +849,7 @@ section .container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-grow: 1;
 }
 
 .portfolio .portfolio-wrap .portfolio-info::before {
